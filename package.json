@@ -10,7 +10,7 @@
     "react-dom": "^15.4.2",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "primereact": "^1.0.0-alpha.1"
+    "primereact": "^1.0.0-alpha.2"
   },
   "scripts": {
     "start": "react-scripts start",

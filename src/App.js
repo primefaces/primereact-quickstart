@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button} from 'primereact';
+import {Button} from 'primereact/components/button/Button';
 import logo from './logo.png';
 import './App.css';
 import 'primereact/resources/primeng.min.css';
