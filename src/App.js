@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Button} from 'primereact/components/button/Button';
 import logo from './logo.png';
 import './App.css';
-import 'primereact/resources/primeng.min.css';
 import 'primereact/resources/themes/omega/theme.css';
+import 'primereact/resources/primereact.min.css';
 import 'font-awesome/css/font-awesome.css';
 
 class App extends Component {
