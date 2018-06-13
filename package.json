@@ -11,7 +11,7 @@
     "react-dom": "^16.2.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "primereact": "^1.5.0"
+    "primereact": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
