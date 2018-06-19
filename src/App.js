@@ -4,7 +4,7 @@ import logo from './logo.png';
 import './App.css';
 import 'primereact/resources/themes/omega/theme.css';
 import 'primereact/resources/primereact.min.css';
-import 'font-awesome/css/font-awesome.css';
+import 'primeicons/primeicons.css';
 
 class App extends Component {
     
@@ -26,7 +26,7 @@ class App extends Component {
               <h2>Welcome to PrimeReact</h2>
             </div>
             <div className="App-intro">
-              <Button label="Click" onClick={this.increment} />
+              <Button label="Click" icon="pi pi-check" onClick={this.increment} />
               
               <p>Number of Clicks: {this.state.count}</p>
             </div>

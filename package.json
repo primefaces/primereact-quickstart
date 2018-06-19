@@ -7,11 +7,11 @@
   },
   "dependencies": {
     "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "classnames": "^2.2.5",
-    "font-awesome": "^4.7.0",
-    "primereact": "^1.6.0"
+    "primereact": "1.6.2",
+    "primeicons": "1.0.0-beta.8"
   },
   "scripts": {
     "start": "react-scripts start",
