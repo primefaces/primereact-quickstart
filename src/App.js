@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Button} from 'primereact/button';
 import logo from './logo.png';
 import './App.css';
-import 'primereact/resources/themes/omega/theme.css';
+import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
