@@ -1,38 +1,51 @@
-import React, { Component } from 'react';
-import {Button} from 'primereact/button';
-import logo from './logo.png';
-import './App.css';
-import 'primereact/resources/themes/nova-light/theme.css';
+import React, { useState, useRef } from 'react';
+
+import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+import { Toast } from 'primereact/toast';
+import PrimeReact from 'primereact/api';
+
+import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
 
-class App extends Component {
-    
-    constructor() {
-        super();
-        this.state = {count: 0};
-        this.increment = this.increment.bind(this);
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  const [text, setText] = useState('');
+  const toastRef = useRef();
+
+  // active ripple effect
+  PrimeReact.ripple = true;
+
+  const onFormSubmit = (e) => {
+    if (text) {
+      toastRef.current.show({ severity: 'info', summary: text, life: 3000 });
     }
-    
-    increment() {
-        this.setState({count: this.state.count + 1});
-    }
-    
-    render() {
-        return (
-          <div className="App">
-            <div className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h2>Welcome to PrimeReact</h2>
-            </div>
-            <div className="App-intro">
-              <Button label="Click" icon="pi pi-check" onClick={this.increment} />
-              
-              <p>Number of Clicks: {this.state.count}</p>
-            </div>
-          </div>
-        );
-    }
+
+    // clear
+    setText('');
+
+    e.preventDefault();
+  }
+
+  return (
+    <div className="App">
+
+      <Toast ref={toastRef} />
+
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+
+      <form className="p-d-flex p-jc-center p-mt-6" onSubmit={onFormSubmit}>
+        <InputText value={text} onChange={(e) => setText(e.target.value)} />
+        <Button type="submit" label="Submit" icon="pi pi-check" className="p-ml-2"/>
+      </form>
+    </div>
+  );
 }
 
 export default App;
